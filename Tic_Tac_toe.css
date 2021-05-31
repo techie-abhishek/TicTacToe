@@ -132,9 +132,9 @@ body{
         color: red;
     }
 }
-@media (min-width:500px){
+@media (max-width:500px){
     .heading{
-        font-size: 35px;
+        font-size: 15vw;
     }
     .cells{
         height: 75px;
