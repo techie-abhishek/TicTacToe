@@ -61,7 +61,7 @@ const checkResult = () => {
 
         }
     }
-    else if((cells[1].innerText===cells[4].innerText && cells[4].innerText===cells[7].innerText)){
+    if((cells[1].innerText===cells[4].innerText && cells[4].innerText===cells[7].innerText)){
         if((cells)[1].innerText==="X"){
             win.innerText="PlayerX is the winner";
             ticTacToe.cells.fill(1)
@@ -75,7 +75,7 @@ const checkResult = () => {
 
         }
     }
-    else if((cells[2].innerText===cells[5].innerText && cells[5].innerText===cells[8].innerText)){
+    if((cells[2].innerText===cells[5].innerText && cells[5].innerText===cells[8].innerText)){
         if((cells)[2].innerText==="X"){
             win.innerText="PlayerX is the winner";
             ticTacToe.cells.fill(1)
@@ -103,7 +103,7 @@ const checkResult = () => {
 
         }
     }
-    else if((cells[3].innerText===cells[4].innerText && cells[4].innerText===cells[5].innerText)){
+    if((cells[3].innerText===cells[4].innerText && cells[4].innerText===cells[5].innerText)){
         if((cells)[3].innerText==="X"){
             win.innerText="PlayerX is the winner";
             ticTacToe.cells.fill(1)
@@ -117,7 +117,7 @@ const checkResult = () => {
 
         }
     }
-    else if((cells[6].innerText===cells[7].innerText && cells[7].innerText===cells[8].innerText)){
+    if((cells[6].innerText===cells[7].innerText && cells[7].innerText===cells[8].innerText)){
         if((cells)[6].innerText==="X"){
             win.innerText="PlayerX is the winner";
             ticTacToe.cells.fill(1)
@@ -147,7 +147,7 @@ const checkResult = () => {
 
         }
     }
-    else if((cells[2].innerText===cells[4].innerText && cells[4].innerText===cells[6].innerText)){
+    if((cells[2].innerText===cells[4].innerText && cells[4].innerText===cells[6].innerText)){
         if((cells)[2].innerText==="X"){
             win.innerText="PlayerX is the winner";
             ticTacToe.cells.fill(1)
