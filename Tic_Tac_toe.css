@@ -1,0 +1,134 @@
+body{
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height:100vh;
+}
+.heading {
+    font-size: 64px;
+    margin-bottom: 16px;
+    color: blueviolet;
+}
+.winner{
+    margin-bottom: 24px;
+    color:rgb(238, 53, 20) ;
+}
+.turn{
+    margin-bottom: 16px;
+    color:rgb(41, 9, 129);
+    font-size:large;
+}
+.play-area{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 18px;
+}
+.cells{
+    height: 100px;
+    width: 100px;
+    border: 1px solid;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius:10px;
+    box-shadow: -2px 0px 9px 9px rgba(0,0,0,0.25);
+-webkit-box-shadow: -2px 0px 9px 9px rgba(0,0,0,0.25);
+-moz-box-shadow: -2px 0px 9px 9px rgba(0,0,0,0.25);
+}
+.cells:hover{
+    background: rgba(48, 181, 181,0.5);
+    border: 1px solid plum;
+}
+.x{
+    font-size: 75px;
+    background-image: linear-gradient(to right top, #857df3, #5c9bff, #44b4ff, #57c9fd, #80dbf5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent ;
+}
+.x:hover{
+    cursor: not-allowed;
+    background-image: linear-gradient(to right top, #857df3, #5c9bff, #44b4ff, #57c9fd, #80dbf5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent ;
+    cursor: not-allowed;
+}
+.o{
+    font-size: 75px;
+    background-image: linear-gradient(to right top, #fe96f3, #ff88df, #fe79ca, #fb6bb5, #f75ea0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent ;
+}
+.o:hover{
+    cursor: not-allowed;
+    background-image: linear-gradient(to right top, #fe96f3, #ff88df, #fe79ca, #fb6bb5, #f75ea0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent ;
+}
+.player{
+    margin:15px;
+}
+.refresh{
+    cursor: pointer;
+    background-image: linear-gradient(to top, #28b5b5, #46bfb3, #5fc8b0, #77d1ad, #8fd9ab);
+    border:none;
+    COLOR:WHITE;
+    letter-spacing: 4px;
+    transition: 0.5s;
+}
+.Player-1, .Player-2, .refresh{
+    padding: 15px;
+    border-radius: 12px;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+}
+.refresh:hover{
+    transform: scale(0.8);
+}
+.scale-animate{
+    animation: scale-animation 2s ease 0.5s infinite alternate-reverse;
+}
+.flip-animate{
+    animation: flip 1s ease;
+}
+.flip-animate1{
+    animation: flip1 2s ease 0s 2 alternate;
+}
+@keyframes scale-animation {
+    0%{
+        color:rgb(93, 21, 226);
+    }
+    25%{
+        transform: scale(1.1);
+    }
+    50%{
+        color: mediumvioletred;
+    }
+    75%{
+        transform: scale(1.0);
+    }
+    100%{
+        color: rgb(24, 223, 41);
+    }
+}
+@keyframes flip {
+    from{ transform: rotateY(0deg);
+    }
+    to{
+        transform: rotateY(180deg);
+    }
+}
+@keyframes flip1 {
+    10%{ transform: scale(1);
+        color:red;
+    }
+    50%{
+        transform: scale(1.5);
+        color: rgb(49, 14, 247);
+    }
+    100%{
+        transform: scale(1);
+        color: red;
+    }
+}
