@@ -132,3 +132,12 @@ body{
         color: red;
     }
 }
+@media (min-width:500px){
+    .heading{
+        font-size: 35px;
+    }
+    .cells{
+        height: 75px;
+        width: 75px;
+    }
+}
