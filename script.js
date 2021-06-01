@@ -36,9 +36,10 @@ const cellClickHandler = (row,column,index) => {
     ticTacToe.playerx = !ticTacToe.playerx
     ticTacToe.count += 1
     if(ticTacToe.count > 4) checkResult();
-    if(ticTacToe.count===9){
+    if(ticTacToe.count===9 && document.getElementsByClassName("winner")[0].innerText=="Begin"){
         document.getElementsByClassName("winner")[0].innerText="Draw";
         document.getElementsByClassName("winner")[0].classList.add("flip-animate1");
+        console.log(document.getElementsByClassName("winner")[0].innerText=="Begin");
         }
 }
 
