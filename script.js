@@ -42,7 +42,6 @@ const cellClickHandler = (row,column,index) => {
         console.log(document.getElementsByClassName("winner")[0].innerText=="Begin");
         }
 }
-
 const dispX = () => {
             const win = document.getElementsByClassName("winner")[0]
             win.innerText="PlayerX is the winner";
@@ -128,3 +127,4 @@ const checkResult = () => {
     }
 }
 
+//https://github.com/techie-abhishek/TicTacToe.git https://github.com/techie-abhishek/TicTacToe.git
