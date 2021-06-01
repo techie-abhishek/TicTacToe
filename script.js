@@ -42,123 +42,88 @@ const cellClickHandler = (row,column,index) => {
         }
 }
 
-const checkResult = () => {
-    const currPlayer = ticTacToe.playerx ? "X" : "O"
-    const cells = document.getElementsByClassName("cells")
-    const win = document.getElementsByClassName("winner")[0]
-    if((cells[0].innerText===cells[3].innerText && cells[3].innerText===cells[6].innerText)){
-        console.log("Running")
-        if((cells)[0].innerText==="X"){
+const dispX = () => {
+            const win = document.getElementsByClassName("winner")[0]
             win.innerText="PlayerX is the winner";
             ticTacToe.cells.fill(1)
             document.getElementsByClassName("winner")[0].classList.add("flip-animate1");
+}
+
+const dispO = () => {
+    const win = document.getElementsByClassName("winner")[0]   
+    win.innerText="PlayerO is the winner";
+    ticTacToe.cells.fill(1)
+    console.log("1")
+    document.getElementsByClassName("winner")[0].classList.add("flip-animate1");
+}
+
+const checkResult = () => {
+    const currPlayer = ticTacToe.playerx ? "X" : "O"
+    const cells = document.getElementsByClassName("cells")
+    if((cells[0].innerText===cells[3].innerText && cells[3].innerText===cells[6].innerText)){
+        if((cells)[0].innerText==="X"){
+            dispX();
         }
         else if((cells)[0].innerText==="O"){
-            win.innerText="PlayerO is the winner";
-            ticTacToe.cells.fill(1)
-            console.log("1")
-            document.getElementsByClassName("winner")[0].classList.add("flip-animate1");
-
+            dispO();
         }
     }
     if((cells[1].innerText===cells[4].innerText && cells[4].innerText===cells[7].innerText)){
         if((cells)[1].innerText==="X"){
-            win.innerText="PlayerX is the winner";
-            ticTacToe.cells.fill(1)
-            document.getElementsByClassName("winner")[0].classList.add("flip-animate1");
+            dispX();
         }
         else if((cells)[1].innerText==="O"){
-            win.innerText="PlayerO is the winner";
-            ticTacToe.cells.fill(1)
-            console.log("2")
-            document.getElementsByClassName("winner")[0].classList.add("flip-animate1");
-
+            dispO();
         }
     }
     if((cells[2].innerText===cells[5].innerText && cells[5].innerText===cells[8].innerText)){
+        console.log("Running")
         if((cells)[2].innerText==="X"){
-            win.innerText="PlayerX is the winner";
-            ticTacToe.cells.fill(1)
-            document.getElementsByClassName("winner")[0].classList.add("flip-animate1");
+            dispX();
         }
         else if((cells)[2].innerText==="O"){
-            win.innerText="PlayerO is the winner";
-            ticTacToe.cells.fill(1)
-            console.log("3")
-            document.getElementsByClassName("winner")[0].classList.add("flip-animate1");
-
+            dispO();
         }
     }
     if((cells[0].innerText===cells[1].innerText && cells[1].innerText===cells[2].innerText) ){
         if((cells)[0].innerText==="X"){
-            win.innerText="PlayerX is the winner";
-            ticTacToe.cells.fill(1)
-            document.getElementsByClassName("winner")[0].classList.add("flip-animate1");
+            dispX();
         }
         else if((cells)[0].innerText==="O"){
-            win.innerText="PlayerO is the winner";
-            ticTacToe.cells.fill(1)
-            console.log("4")
-            document.getElementsByClassName("winner")[0].classList.add("flip-animate1");
-
+            dispO();
         }
     }
     if((cells[3].innerText===cells[4].innerText && cells[4].innerText===cells[5].innerText)){
         if((cells)[3].innerText==="X"){
-            win.innerText="PlayerX is the winner";
-            ticTacToe.cells.fill(1)
-            document.getElementsByClassName("winner")[0].classList.add("flip-animate1");
+            dispX();
         }
         else if((cells)[3].innerText==="O"){
-            win.innerText="PlayerO is the winner";
-            ticTacToe.cells.fill(1)
-            console.log("5")
-            document.getElementsByClassName("winner")[0].classList.add("flip-animate1");
-
+            dispO();
         }
     }
     if((cells[6].innerText===cells[7].innerText && cells[7].innerText===cells[8].innerText)){
         if((cells)[6].innerText==="X"){
-            win.innerText="PlayerX is the winner";
-            ticTacToe.cells.fill(1)
-            document.getElementsByClassName("winner")[0].classList.add("flip-animate1");
+            dispX();
         }
         else if((cells)[6].innerText==="O"){
-            win.innerText="PlayerO is the winner";
-            ticTacToe.cells.fill(1)
-            document.getElementsByClassName("winner")[0].classList.add("flip-animate1");
-            
-            console.log("6")
-
+            dispO();
         }
     }
     if((cells[0].innerText===cells[4].innerText && cells[4].innerText===cells[8].innerText)){
         if((cells)[0].innerText==="X"){
-            win.innerText="PlayerX is the winner";
-            ticTacToe.cells.fill(1)
-            document.getElementsByClassName("winner")[0].classList.add("flip-animate1");
+            dispX();
         }
         else if((cells)[0].innerText==="O"){
-            win.innerText="PlayerO is the winner";
-            ticTacToe.cells.fill(1)
-            document.getElementsByClassName("winner")[0].classList.add("flip-animate1");
-            
-            console.log("7")
-
-        }
+            dispO();
+       }
     }
     if((cells[2].innerText===cells[4].innerText && cells[4].innerText===cells[6].innerText)){
         if((cells)[2].innerText==="X"){
-            win.innerText="PlayerX is the winner";
-            ticTacToe.cells.fill(1)
-            document.getElementsByClassName("winner")[0].classList.add("flip-animate1");
+            dispX();
         }
         else if((cells)[2].innerText==="O"){
-            win.innerText="PlayerO is the winner";
-            ticTacToe.cells.fill(1)
-            console.log("8")
-            document.getElementsByClassName("winner")[0].classList.add("flip-animate1");
-
+            dispO();
         }
     }
 }
+
